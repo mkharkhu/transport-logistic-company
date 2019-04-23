@@ -1,0 +1,258 @@
+{
+	"info": {
+		"_postman_id": "a03a600e-8586-4b13-945c-ac266ecb1b75",
+		"name": "criptanite",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "getLocationById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/locations/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"locations",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addLocation",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": 120,\n    \"name\": \"poltava\",\n    \"x\": 10,\n    \"y\": 20,\n    \"head\": true\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/locations",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"locations"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateLocation",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/locations/120?name=pooltava",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"locations",
+						"120"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "pooltava"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteLocationById",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/locations/4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"locations",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getRouteById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/routes/100",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"routes",
+						"100"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addRoute",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{   \n\t\"id\": 100,\n\t\"name\": \"third\",\n    \"head\": {\n        \"id\": 2,\n        \"name\": \"kyiv\",\n        \"x\": 10,\n        \"y\": 20,\n        \"head\": true\n    },\n    \"locations\": [\n        {\n            \"id\": 2,\n            \"name\": \"kyiv\",\n            \"x\": 10,\n            \"y\": 20,\n            \"head\": true\n        },\n        {\n            \"id\": 3,\n            \"name\": \"lviv\",\n            \"x\": 30,\n            \"y\": 30,\n            \"head\": false\n        }\n    ]\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/routes/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"routes",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateRoute",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/routes/100?name=sndakf",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"routes",
+						"100"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "sndakf"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteRouteById",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/routes/100",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"routes",
+						"100"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getRoutePlan",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/routes/10/plan",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"routes",
+						"10",
+						"plan"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
