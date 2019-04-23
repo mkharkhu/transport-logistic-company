@@ -1,5 +1,6 @@
 package com.example.demo.controller;
 
+import com.example.demo.dto.PlanDto;
 import com.example.demo.entity.Route;
 import com.example.demo.service.DistanceService;
 import com.example.demo.service.RouteService;
@@ -42,9 +43,8 @@ public class RouteController {
         routeService.deleteRouteById(id);
     }
 
-    //in the process
     @GetMapping("/{id}/plan")
-    public void getRoutePlan(@PathVariable("id") Integer id) {
-        distanceService.getDistance(id);
+    public PlanDto getRoutePlan(@PathVariable("id") Integer id) {
+        return distanceService.getDistance(id);
     }
 }
